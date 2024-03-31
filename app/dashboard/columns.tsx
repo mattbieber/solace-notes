@@ -19,7 +19,7 @@ export const columns: ColumnDef<Note>[] = [
   },
   {
     id: 'delete',
-    cell: ({ row }) => (
+    cell: () => (
       <svg
         width="24"
         height="24"

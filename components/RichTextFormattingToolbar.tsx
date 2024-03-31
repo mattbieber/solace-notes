@@ -4,7 +4,6 @@ import { ColorPicker } from './ColorPicker'
 import { ToolbarIcons } from './icons'
 import { Toggle } from './ui/toggle'
 
-
 interface RichTextFormattingToolbarProps {
   editor: Editor | null
 }
@@ -13,12 +12,12 @@ export function RichTextFormattingToolbar({
   editor,
 }: RichTextFormattingToolbarProps) {
   const [showColorPicker, setShowColorPicker] = useState(false)
-  const [color, setColor] = useState<string>('')
-  
+  // const [color, setColor] = useState<string>('')
+
   if (!editor) {
     return null
   }
-  
+
   // console.log('toolbar')
 
   const colorPickerStyle = showColorPicker
@@ -116,7 +115,7 @@ export function RichTextFormattingToolbar({
       </Toggle>
       <div className="relative group inline-block z-50">
         <div className={colorPickerStyle}>
-          { showColorPicker && <ColorPicker /> }
+          {showColorPicker && <ColorPicker />}
         </div>
       </div>
     </section>
